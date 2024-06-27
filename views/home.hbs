@@ -1,0 +1,30 @@
+<hr>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">NIC</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.nic}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.salary}}</td>
+      <td>
+        <a href="/show-customer/{{this.nic}}" class="btn btn-success mb-3 mb-md-0">Show Data</a>&nbsp;
+        <a href="/delete-customer/{{this.nic}}" class="btn btn-danger mb-3 mb-md-0">Delete Data</a>&nbsp;
+        <a href="/update-customer-form/{{this.nic}}" class="btn btn-warning">Update Data</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<hr>
